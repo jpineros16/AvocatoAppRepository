@@ -31,24 +31,18 @@ def main():
             st.write("Comando inválido. Por favor sube una imagen")
         else:
             with st.spinner('Modelo trabajando...'):
-                #plt.imshow(image)
-                #plt.axis("off")
                 predictions = predict(image)
-                #time.sleep(1)
                 st.success('Clasificado')
                 st.write(predictions)
-                #st.pyplot(fig)
 
 
 def predict(image):
     classifier_model = "simple_NN_model.h5"
-    model = load_model(classifier_model, compile=False)#, custom_objects={'KerasLayer': hub.KerasLayer})
-    #test_image = image.resize((24,32))
+    model = load_model(classifier_model, compile=False)
     test_image = cv2.resize(image, (24,32))
     test_image = preprocessing.image.img_to_array(test_image)
     test_image = test_image/ 255.0
 
-    # for a simple fully-connected network, flatten the image
     test_image = test_image.flatten()
     test_image = np.expand_dims(test_image, axis=0)
     
