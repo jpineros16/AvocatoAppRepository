@@ -21,7 +21,6 @@ def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
     class_btn = st.button("Clasificar")
     if file_uploaded is not None:    
-        #image = Image.open(file_uploaded)
         imageShow = Image.open(file_uploaded)
         image = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
         st.image(imageShow, caption='Imagen Cargada', use_column_width=True)
