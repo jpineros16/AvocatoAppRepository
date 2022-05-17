@@ -31,7 +31,7 @@ def main():
             st.write("Comando inválido. Por favor sube una imagen")
         else:
             with st.spinner('Modelo trabajando...'):
-                predictions = predict(image)
+                predictions = predict(imageBGR)
                 st.write("Imagen clasificada con éxito")
                 st.success(predictions)                
 
