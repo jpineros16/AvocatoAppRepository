@@ -8,7 +8,6 @@ import cv2
 from tensorflow.keras import preprocessing
 
 fig = plt.figure()
-global class_btn
     
 with open("custom.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -26,8 +25,9 @@ def main():
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
         imageRescaled = ResizeImage(imageBGR)
         st.image(imageRescaled, caption='Imagen Cargada')#, use_column_width=True)
-        class_btn = st.button("Clasificar")
-        
+    
+    class_btn = st.button("Clasificar")
+
     if class_btn:
         if file_uploaded is None:
             st.write("Comando inválido. Por favor sube una imagen")
