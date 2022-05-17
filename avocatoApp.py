@@ -22,7 +22,7 @@ def main():
     if file_uploaded is not None:    
         imageShow = Image.open(file_uploaded)
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
-        imageRescaled = ResizeImage(imageBGR)
+        imageRescaled = ResizeImage(imageShow)
         st.image(imageRescaled, caption='Imagen Cargada', use_column_width=True)
         class_btn = st.button("Clasificar")
         
@@ -39,8 +39,8 @@ def ResizeImage(image):
     percentage = 1/8
     width = int(1536*percentage)
     height = int(2048*percentage)
-    imageShow = cv2.resize(image, (width, height))
-    return imageShow 
+    imageRe = cv2.resize(image, (width, height))
+    return imageRe
 
 def predict(image):
     classifier_model = "simple_NN_model.h5"
