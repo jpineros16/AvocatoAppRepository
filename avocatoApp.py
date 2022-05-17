@@ -19,11 +19,12 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
-    class_btn = st.button("Clasificar")
     if file_uploaded is not None:    
         imageShow = Image.open(file_uploaded)
-        image = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
-        st.image(imageShow, caption='Imagen Cargada', use_column_width=True)
+        imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
+        imageRescaled = ResizeImage(imageBGR)
+        st.image(imageRescaled, caption='Imagen Cargada', use_column_width=True)
+        class_btn = st.button("Clasificar")
         
     if class_btn:
         if file_uploaded is None:
@@ -34,6 +35,12 @@ def main():
                 st.write("Imagen clasificada con éxito")
                 st.success(predictions)                
 
+def ResizeImage(image):
+    percentage = 1/8
+    width = int(1536*percentage)
+    height = int(2048*percentage)
+    imageShow = cv2.resize(image, (width, height))
+    return imageR
 
 def predict(image):
     classifier_model = "simple_NN_model.h5"
