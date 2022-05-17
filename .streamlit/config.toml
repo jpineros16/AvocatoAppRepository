@@ -1,3 +1,4 @@
 [theme]
 #base="light"
-backgroundColor="#000000"
+base = "Custom Theme"
+backgroundColor="##568203"
