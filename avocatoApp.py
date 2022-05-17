@@ -19,6 +19,8 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
+    class_btn = st.button()
+    
     if file_uploaded is not None:    
         imageShow = Image.open(file_uploaded)
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
