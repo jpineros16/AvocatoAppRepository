@@ -26,11 +26,9 @@ h1{
   }
   h3{
     color: #000;
-    text-align: center;
   }
   p{
     color: #000;
-    text-align: center;
   }
   /*
   ----------------------
@@ -53,10 +51,8 @@ h1{
   .stTextInput
   {
     color: #000000;
-    text-align: center;
   }
   .stTextInput > div > div > input {
     color: #000000;
-    text-align: center;
   }
   
