@@ -40,7 +40,7 @@ def ResizeImage(image):
     width = int(1536*percentage)
     height = int(2048*percentage)
     imageShow = cv2.resize(image, (width, height))
-    return imageR
+    return imageShow 
 
 def predict(image):
     classifier_model = "simple_NN_model.h5"
