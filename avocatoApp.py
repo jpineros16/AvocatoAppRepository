@@ -31,7 +31,7 @@ def main():
         else:
             with st.spinner('Modelo trabajando...'):
                 predictions = predict(image)
-                st.success('Es un aguacate en etapa' + class_names[np.argmax(predictions)]} con { (100 * np.max(predictions)).round(2) } % precisión.)
+                st.success('Es un aguacate en etapa' + f"{class_names[np.argmax(predictions)]} con { (100 * np.max(predictions)).round(2) } % precisión.")
                 st.write(predictions)
 
 
