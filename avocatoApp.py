@@ -53,8 +53,10 @@ def predict(image):
     scores = predictions
 
    
-    result = f"{'Es un aguacate' class_names[np.argmax(scores)]} con { (100 * np.max(scores)).round(2) } % precisión." 
-    return result
+    result = f"{class_names[np.argmax(scores)]} con { (100 * np.max(scores)).round(2) } % precisión." 
+    adc = "Es un aguacate en etapa "
+    textoFin = adc + result
+    return textoFin
 
 
 
