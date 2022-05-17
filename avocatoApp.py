@@ -39,7 +39,7 @@ def main():
                 
 def ResizeImage(imagen):
     imageRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
-    percentage = 1/32
+    percentage = 1/8
     width = int(1536*percentage)
     height = int(2048*percentage)
     imageRe = cv2.resize(imageRGB, (width, height))
