@@ -8,7 +8,8 @@ import cv2
 from tensorflow.keras import preprocessing
 
 fig = plt.figure()
-
+global class_btn
+    
 with open("custom.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -19,7 +20,6 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
-    global class_btn
     
     if file_uploaded is not None:    
         imageShow = Image.open(file_uploaded)
