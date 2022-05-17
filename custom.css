@@ -53,8 +53,10 @@ h1{
   .stTextInput
   {
     color: #000000;
+    text-align: center;
   }
   .stTextInput > div > div > input {
     color: #000000;
+    text-align: center;
   }
   
