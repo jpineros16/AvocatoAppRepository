@@ -31,7 +31,7 @@ def main():
         else:
             with st.spinner('Modelo trabajando...'):
                 predictions = predict(image)
-                st.success('Imagen Clasificada con éxito')
+                st.success('Es un aguacate en etapa' + class_names[np.argmax(predictions)]} con { (100 * np.max(predictions)).round(2) } % precisión.)
                 st.write(predictions)
 
 
@@ -50,13 +50,12 @@ def predict(image):
           'Sobremaduro',
           'Verde']
     predictions = model.predict(test_image)
-    scores = predictions
-
+    #scores = predictions
    
-    result = f"{class_names[np.argmax(scores)]} con { (100 * np.max(scores)).round(2) } % precisión." 
-    adc = "Es un aguacate en etapa "
-    textoFin = adc + result
-    return textoFin
+    #result = f"{class_names[np.argmax(scores)]} con { (100 * np.max(scores)).round(2) } % precisión." 
+    #adc = "Es un aguacate en etapa "
+    #textoFin = adc + result
+    return scores
 
 
 
