@@ -24,7 +24,7 @@ def main():
         imageShow = Image.open(file_uploaded)
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
         imageRescaled = ResizeImage(imageBGR)
-        st.image(imageRescaled, caption='Imagen Cargada', use_column_width=True)
+        st.image(imageRescaled, caption='Imagen Cargada')#, use_column_width=True)
         class_btn = st.button("Clasificar")
         
     if class_btn:
