@@ -55,7 +55,7 @@ def predict(image):
     result = f"{class_names[np.argmax(scores)]} con { (100 * np.max(scores)).round(2) } % precisión." 
     adc = "Es un aguacate en etapa "
     textoFin = adc + result
-    return scores
+    return textoFin
 
 
 
