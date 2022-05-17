@@ -35,7 +35,7 @@ h1{
         BUTTONS
   ----------------------
   */
-  .stButton > button {
+  /*.stButton > button {
     background-color: #ffca47;
     color: #000;
     border-style:none;
@@ -45,7 +45,7 @@ h1{
   .stButton > button:hover {
     background-color: #333333;
     color: #fff;
-  }
+  }*/
   
   
   .stTextInput
