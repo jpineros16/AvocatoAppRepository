@@ -19,7 +19,6 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
-    class_btn = st.button("Clasificar", disabled = False)
     
     if file_uploaded is not None:    
         imageShow = Image.open(file_uploaded)
