@@ -54,6 +54,8 @@ st.download_button(
     data = imageShow,
     file_name = "My Avocato Application",
     mime = "jpg")
+
+st.write(imageShow)
                
 def ResizeImage(imagen):
     imageRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
