@@ -46,7 +46,7 @@ h1{
     color: #fff;
   }
 
-.stDownload_Button > button {
+   .stDownload_Button > download_button {
     background-color: #ffca47;
     color: #000;
     border-style:none;
