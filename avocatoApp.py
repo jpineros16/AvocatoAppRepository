@@ -17,7 +17,7 @@ st.title('Clasificador de madurez de aguacate')
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
 st.download_button(
     label = "Descargar Aplicativo Móvil",
-    data = "app-release.apk",
+    data = "app-relsddease.apk",
     file_name = "My Avocato Application",
     mime = "apk")
 
