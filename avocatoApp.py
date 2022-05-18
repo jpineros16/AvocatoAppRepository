@@ -26,7 +26,7 @@ def file_selector(folder_path='.'):
 
 filename = file_selector()
 st.write('You selected `%s`' % filename)
-st.wirte(str(folder_path))
+st.write(str(folder_path))
 
 '''st.download_button(
     label = "Descargar Aplicativo Móvil",
