@@ -45,6 +45,14 @@ h1{
     background-color: #333333;
     color: #fff;
   }
+
+.stDownload_Button > button {
+    background-color: #ffca47;
+    color: #000;
+    border-style:none;
+    z-index: 4;
+    margin-left: 45%;
+  }
   
   
   .stTextInput
