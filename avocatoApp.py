@@ -16,12 +16,12 @@ st.title('Clasificador de madurez de aguacate')
 
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
 
-with open("app-release.zip", "rb") as fp:
+with open("app-release.rar", "rb") as fp:
     btn = st.download_button(
         label="Download ZIP",
         data=fp,
-        file_name="MyAvocatoApp.zip",
-        mime="application/zip"
+        file_name="MyAvocatoApp.rar",
+        mime="application/rar"
     )
     
     st.download_button(
