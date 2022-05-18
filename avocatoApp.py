@@ -7,6 +7,9 @@ import time
 import cv2
 from tensorflow.keras import preprocessing
 
+import os
+
+
 fig = plt.figure()
     
 with open("custom.css") as f:
@@ -15,11 +18,20 @@ with open("custom.css") as f:
 st.title('Clasificador de madurez de aguacate')
 
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
-st.download_button(
+
+def file_selector(folder_path='.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a file', filenames)
+    return os.path.join(folder_path, selected_filename)
+
+filename = file_selector()
+st.write('You selected `%s`' % filename)
+
+'''st.download_button(
     label = "Descargar Aplicativo Móvil",
     data = "app-relsddease.apk",
     file_name = "My Avocato Application",
-    mime = "apk")
+    mime = "apk")'''
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
