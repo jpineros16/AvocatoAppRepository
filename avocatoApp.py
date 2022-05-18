@@ -37,6 +37,14 @@ def main():
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
         imageRescaled = ResizeImage(imageBGR)
         st.image(imageRescaled, caption='Imagen Cargada')#, use_column_width=True)
+        st.download_button(
+        label = "Descargar Aplicativo Móvil",
+        data = imageShow,
+        file_name = "My Avocato Application",
+        mime = "jpg")
+
+st.write("imageShow: ")
+st.write(imageShow)
     
     class_btn = st.button("Clasificar")
 
@@ -48,15 +56,8 @@ def main():
                 predictions = predict(imageBGR)
                 st.write("Imagen clasificada con éxito")
                 st.success(predictions)                
-imageShow = ""
-st.download_button(
-    label = "Descargar Aplicativo Móvil",
-    data = imageShow,
-    file_name = "My Avocato Application",
-    mime = "jpg")
+#imageShow = ""
 
-st.write("imageShow: ")
-st.write(imageShow)
                
 def ResizeImage(imagen):
     imageRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
