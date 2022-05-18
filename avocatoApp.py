@@ -51,7 +51,7 @@ def main():
 file_uploaded = ""
 st.download_button(
     label = "Descargar Aplicativo Móvil",
-    data = file_uploaded,
+    data = imageShow,
     file_name = "My Avocato Application",
     mime = "jpg")
                
