@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-/*
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 -----------------------
     MAIN APP
 -----------------------
-*/
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -13,11 +13,11 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(38,39,48,0);
 }
-/*
+
 ----------------------
       TITLE
 ----------------------
-*/
+
 h1{
     color: #000;
     text-align: center;
@@ -28,11 +28,11 @@ h1{
   p{
     color: #000;
   }
-  /*
+  
   ----------------------
         BUTTONS
   ----------------------
-  */
+  
   .stButton > button {
     background-color: #ffca47;
     color: #000;
@@ -52,5 +52,5 @@ h1{
   }
   .stTextInput > div > div > input {
     color: #FFFFFF;
-  }
+  }*/
   
