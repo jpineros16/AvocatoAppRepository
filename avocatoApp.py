@@ -6,8 +6,6 @@ from tensorflow.keras.models import load_model
 import time
 import cv2
 from tensorflow.keras import preprocessing
-import os
-
 
 fig = plt.figure()
     
@@ -18,17 +16,20 @@ st.title('Clasificador de madurez de aguacate')
 
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
 
-#selected_filename = ""
-#def file_selector(folder_path='.'):
-#    filenames = os.listdir(folder_path)
-#    selected_filename = st.selectbox('Select a file', filenames)
-#    return os.path.join(folder_path, selected_filename)
-#
-#filename = file_selector()
-#st.write('You selected `%s`' % filename)
-#
-#archivoAPK = str(selected_filename)
-
+with open("app-release.zip", "rb") as fp:
+    btn = st.download_button(
+        label="Download ZIP",
+        data=fp,
+        file_name="MyAvocatoApp.zip",
+        mime="application/zip"
+    )
+    
+    st.download_button(
+        label = "Descargar Aplicativo Móvil",
+        data = imageShow,
+        file_name = "My Avocato Application",
+        mime = "jpg")
+    
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
     
@@ -36,15 +37,7 @@ def main():
         imageShow = Image.open(file_uploaded)
         imageBGR = cv2.cvtColor(np.array(imageShow), cv2.COLOR_RGB2BGR)
         imageRescaled = ResizeImage(imageBGR)
-        st.image(imageRescaled, caption='Imagen Cargada')#, use_column_width=True)
-        st.download_button(
-        label = "Descargar Aplicativo Móvil",
-        data = imageShow,
-        file_name = "My Avocato Application",
-        mime = "jpg")
-
-        st.write("imageShow: ")
-        st.write(imageShow)
+        st.image(imageRescaled, caption='Imagen Cargada')
     
     class_btn = st.button("Clasificar")
 
@@ -55,8 +48,7 @@ def main():
             with st.spinner('Modelo trabajando...'):
                 predictions = predict(imageBGR)
                 st.write("Imagen clasificada con éxito")
-                st.success(predictions)                
-#imageShow = ""
+                st.success(predictions)     
 
                
 def ResizeImage(imagen):
