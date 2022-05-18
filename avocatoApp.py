@@ -17,8 +17,8 @@ with open("custom.css") as f:
 st.title('Clasificador de madurez de aguacate')
 
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
-folder_path = ""
 
+selected_filename = ""
 def file_selector(folder_path='.'):
     filenames = os.listdir(folder_path)
     selected_filename = st.selectbox('Select a file', filenames)
