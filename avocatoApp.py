@@ -18,17 +18,11 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 with open("app-release.rar", "rb") as fp:
     btn = st.download_button(
-        label="Download ZIP",
+        label="Descargar Aplicativo Móvil",
         data=fp,
         file_name="MyAvocatoApp.rar",
         mime="application/rar"
     )
-    
-    st.download_button(
-        label = "Descargar Aplicativo Móvil",
-        data = imageShow,
-        file_name = "My Avocato Application",
-        mime = "jpg")
     
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
