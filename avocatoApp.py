@@ -48,7 +48,7 @@ def main():
                 predictions = predict(imageBGR)
                 st.write("Imagen clasificada con éxito")
                 st.success(predictions)                
-
+file_uploaded = ""
 st.download_button(
     label = "Descargar Aplicativo Móvil",
     data = file_uploaded,
