@@ -15,7 +15,11 @@ with open("custom.css") as f:
 st.title('Clasificador de madurez de aguacate')
 
 st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado de maduración se encuentra")
-st.download_button("Descargar Aplicativo Móvil")
+st.download_button(
+    label = "Descargar Aplicativo Móvil",
+    data = "app-release.apk",
+    file_name = "My Avocato Application",
+    mime = "apk")
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
