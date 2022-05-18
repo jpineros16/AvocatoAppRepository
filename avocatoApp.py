@@ -55,6 +55,7 @@ st.download_button(
     file_name = "My Avocato Application",
     mime = "jpg")
 
+st.write("imageShow: ")
 st.write(imageShow)
                
 def ResizeImage(imagen):
