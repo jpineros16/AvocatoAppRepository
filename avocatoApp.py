@@ -6,7 +6,6 @@ from tensorflow.keras.models import load_model
 import time
 import cv2
 from tensorflow.keras import preprocessing
-
 import os
 
 
@@ -27,13 +26,14 @@ def file_selector(folder_path='.'):
 
 filename = file_selector()
 st.write('You selected `%s`' % filename)
-st.write("Carpeta: " + str(folder_path))
 
-'''st.download_button(
+archivoAPK = filename
+
+st.download_button(
     label = "Descargar Aplicativo Móvil",
-    data = "app-relsddease.apk",
+    data = archivoAPK,
     file_name = "My Avocato Application",
-    mime = "apk")'''
+    mime = "apk")
 
 def main():
     file_uploaded = st.file_uploader("Escoge un archivo", type=["png","jpg","jpeg"])
