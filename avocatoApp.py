@@ -27,7 +27,7 @@ def file_selector(folder_path='.'):
 filename = file_selector()
 st.write('You selected `%s`' % filename)
 
-archivoAPK = selected_filename
+archivoAPK = str(selected_filename)
 
 st.download_button(
     label = "Descargar Aplicativo Móvil",
