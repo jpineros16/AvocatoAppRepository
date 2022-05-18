@@ -43,8 +43,8 @@ def main():
         file_name = "My Avocato Application",
         mime = "jpg")
 
-st.write("imageShow: ")
-st.write(imageShow)
+        st.write("imageShow: ")
+        st.write(imageShow)
     
     class_btn = st.button("Clasificar")
 
