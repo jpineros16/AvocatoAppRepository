@@ -18,9 +18,17 @@ st.markdown("Bienvenido. Sube una imagen de un aguacate y te dirá en que estado
 
 with open("app-release.rar", "rb") as fp:
     btn = st.download_button(
-        label="Descargar Aplicativo Móvil",
+        label="Descargar Aplicativo Móvil Completo",
         data=fp,
         file_name="MyAvocatoApp.rar",
+        mime="application/rar"
+    )
+    
+with open("app-debug.rar", "rb") as fp:
+    btn = st.download_button(
+        label="Descargar Aplicativo Móvil Pórtatil",
+        data=fp,
+        file_name="MyAvocatoAppPortable.rar",
         mime="application/rar"
     )
     
